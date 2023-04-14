@@ -1,0 +1,48 @@
+﻿@model AdvancedProgramming_Lesson1.Models.Smartphone
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Smartphone</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Rom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Rom)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CoreNr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CoreNr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DisplaySize)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DisplaySize)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Battery)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Battery)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

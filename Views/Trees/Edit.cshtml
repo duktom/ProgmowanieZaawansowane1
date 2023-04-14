@@ -1,0 +1,54 @@
+﻿@model AdvancedProgramming_Lesson1.Models.Tree
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Tree</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Height" class="control-label"></label>
+                <input asp-for="Height" class="form-control" />
+                <span asp-validation-for="Height" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TreeType" class="control-label"></label>
+                <input asp-for="TreeType" class="form-control" />
+                <span asp-validation-for="TreeType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlantDate" class="control-label"></label>
+                <input asp-for="PlantDate" class="form-control" />
+                <span asp-validation-for="PlantDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Diameter" class="control-label"></label>
+                <input asp-for="Diameter" class="form-control" />
+                <span asp-validation-for="Diameter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LeafColor" class="control-label"></label>
+                <input asp-for="LeafColor" class="form-control" />
+                <span asp-validation-for="LeafColor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
